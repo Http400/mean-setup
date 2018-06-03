@@ -1,0 +1,85 @@
+<div class="container">
+
+    <table class="table table-sm">        
+        <h3 style="margin-bottom: 20px;">
+            Posts
+            <div class="float-right">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addPostModal"><i class="fas fa-plus"></i> Add post</button>
+            </div>
+        </h3>
+        <tbody>
+            <tr ng-repeat="post in vm.posts">
+                <td>{{ post.title }}</td>
+                <td>
+                    <a class="btn btn-info btn-sm" ui-sref="adminPanel.posts.details({ id: post._id })">
+                        <i class="far fa-edit"></i> Edit
+                    </a>
+                    <button type="button" class="btn btn-danger btn-sm" ng-click="vm.setPostToBeRemoved(post)" data-toggle="modal" data-target="#removePostModal">
+                        <i class="fas fa-trash-alt"></i> Remove
+                    </button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+<!-- Remove Post Modal -->
+<div class="modal fade" id="removePostModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        
+            <div class="modal-header">
+                <h4 class="modal-title">Removing post</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        
+            <div class="modal-body">
+                Are You sure you want to 
+                <span class="text-danger">permanently remove</span> 
+                the post <span class="font-italic">{{ vm.postToBeRemoved.title }}</span>?
+            </div>
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" ng-click="vm.removePost()">Remove</button>
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+<!-- Add Post Modal -->
+<div class="modal fade" id="addPostModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+      
+            <div class="modal-header">
+                <h4 class="modal-title">Adding new post</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" ng-model="vm.postTitle">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" ng-click="vm.createNewPost()">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        
+        </div>
+    </div>
+  </div>

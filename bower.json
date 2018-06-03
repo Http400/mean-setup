@@ -1,0 +1,66 @@
+{
+  "name": "kreatywny-rabarbar",
+  "version": "0.1.0",
+  "description": "",
+  "authors": [
+    "Pawel Wojnarowski"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-ui-router": "^1.0.14",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "font-awesome": "^5.0.8",
+    "masonry-layout": "^4.2.1"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": ">= 3.3.1"
+      }
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "scss/bootstrap.scss",
+        "less/bootstrap.less"
+      ],
+      "dependencies": {
+        "jquery": ">= 3.2.1"
+      }
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.css",
+        "slick/slick.less",
+        "slick/slick.scss",
+        "slick/slick-theme.css"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "web-fonts-with-css/css/fontawesome-all.css"
+      ]
+    },
+    "masonry-layout": {
+      "main": [
+        "dist/masonry.pkgd.js"
+      ]
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "settings";
+@import "admin_panel";
+
+body {
+	//background-color: $color-bg;
+    //color: $color-text;
+    font-family: 'Raleway';
+}
+
+p {
+	font-size: 14px;
+}
+
+.fa-bars {
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+}
+

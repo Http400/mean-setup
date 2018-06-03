@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Admin panel</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid admin-panel-container no-gutters">
+    <div class="left">
+        <input type="checkbox" id="checkbox1" />
+        <label for="checkbox1">
+            <span class="toggle navbar-toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+            <ul class="nav flex-column menu">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="adminPanel.main" ui-sref-active="active">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="adminPanel.posts.list" ui-sref-active="active">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="adminPanel.account" ui-sref-active="active">Account</a>
+                </li>
+              </ul>
+        </label>
+    </div>
+    <div class="right">
+        <div data-ui-view></div>
+    </div>
+</div>

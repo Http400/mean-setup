@@ -1,0 +1,17 @@
+$color-bg: green;
+$color-text: white;
+
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../webfonts/slick.eot');
+    src: url('../webfonts/slick.eot?#iefix') format('embedded-opentype'), url('../webfonts/slick.woff') format('woff'), url('../webfonts/slick.ttf') format('truetype'), url('../webfonts/slick.svg#slick') format('svg');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../webfonts/Raleway-Regular.ttf') format('truetype'), url('../webfonts/Raleway-Regular.ttf') format('truetype');
+}
